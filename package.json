@@ -1,0 +1,43 @@
+{
+    "name": "cicd-sample",
+    "version": "0.0.1",
+    "description": "A repository for testing CI/CD workflows and processes",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "start:dev": "nodemon src/index.ts",
+        "test": "jest",
+        "format": "prettier --write src/**/*",
+        "format:check": "prettier --check src/**/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iaeshliman/cicd-sample.git"
+    },
+    "author": "Isaac Aeshliman",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/iaeshliman/cicd-sample/issues"
+    },
+    "homepage": "https://github.com/iaeshliman/cicd-sample#readme",
+    "dependencies": {
+        "express": "^4.18.2",
+        "helmet": "^7.0.0",
+        "http-errors": "^2.0.0",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.17",
+        "@types/http-errors": "^2.0.1",
+        "@types/jest": "^29.5.2",
+        "@types/morgan": "^1.9.4",
+        "@types/node": "^20.3.1",
+        "jest": "^29.5.0",
+        "nodemon": "^2.0.22",
+        "prettier": "^2.8.8",
+        "ts-jest": "^29.1.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.3"
+    }
+}
