@@ -3,7 +3,7 @@ name: validate
 run-name: validate PR
 
 on:
-    pul_request:
+    pull_request:
         branches:
             - main
 
