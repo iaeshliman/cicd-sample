@@ -12,10 +12,16 @@ describe('calculator service', () => {
             expect(calculatorService.calculate).toBeDefined()
         })
 
-        it('3 + 2 = 5', () => {
-            expect(
-                calculatorService.calculate({ operator: '+', x: 3, y: 2 })
-            ).toBe(5)
-        })
+        it.each([
+            { args: { operator: '+', x: 3, y: 2 }, expected: 5 },
+            { args: { operator: '-', x: 3, y: 2 }, expected: 1 },
+            { args: { operator: '*', x: 3, y: 2 }, expected: 6 },
+            { args: { operator: '/', x: 3, y: 2 }, expected: 3 / 2 },
+        ])(
+            '$args.x $args.operator $args.y = $expected',
+            ({ args, expected }) => {
+                expect(calculatorService.calculate(args)).toBe(expected)
+            }
+        )
     })
 })
